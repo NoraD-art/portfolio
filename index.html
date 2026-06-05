@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolyo | Bilişim Öğrencisi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Proje Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        /* Proje Kartı */
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .project-desc {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tech-tag {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .project-link:hover {
+            background: #764ba2;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- BAŞLIK -->
+        <div class="header">
+            <h1>Benim Portfolyom</h1>
+            <p>Bilişim Yazılım Teknolojileri Öğrencisi | 15 Proje</p>
+        </div>
+
+        <!-- 15 PROJE KARTI -->
+        <div class="projects-grid">
+            
+            <!-- Proje 1 -->
+            <div class="project-card">
+                <div class="project-image">📱</div>
+                <div class="project-content">
+                    <div class="project-title">Okul Kütüphane Otomasyonu</div>
+                    <div class="project-desc">Kitap ekleme, silme, listeleme ve ödünç verme işlemleri.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">SQL Server</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 2 -->
+            <div class="project-card">
+                <div class="project-image">🌤️</div>
+                <div class="project-content">
+                    <div class="project-title">Hava Durumu Uygulaması</div>
+                    <div class="project-desc">API kullanarak anlık hava durumu bilgisi gösterir.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">API</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 3 -->
+            <div class="project-card">
+                <div class="project-image">✅</div>
+                <div class="project-content">
+                    <div class="project-title">To-Do List Uygulaması</div>
+                    <div class="project-desc">Günlük görevleri ekleme, silme ve tamamlama.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JS</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 4 -->
+            <div class="project-card">
+                <div class="project-image">🔐</div>
+                <div class="project-content">
+                    <div class="project-title">Şifre Üretici</div>
+                    <div class="project-desc">Güçlü ve rastgele şifreler oluşturur.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 5 -->
+            <div class="project-card">
+                <div class="project-image">💰</div>
+                <div class="project-content">
+                    <div class="project-title">Döviz Çevirici</div>
+                    <div class="project-desc">Anlık kurlarla para birimi çevirme.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">API</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 6 -->
+            <div class="project-card">
+                <div class="project-image">📝</div>
+                <div class="project-content">
+                    <div class="project-title">Not Defteri</div>
+                    <div class="project-desc">Notları kaydetme ve listeleme (LocalStorage).</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">LocalStorage</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 7 -->
+            <div class="project-card">
+                <div class="project-image">❓</div>
+                <div class="project-content">
+                    <div class="project-title">Quiz Uygulaması</div>
+                    <div class="project-desc">Çoktan seçmeli sorularla bilgi yarışması.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 8 -->
+            <div class="project-card">
+                <div class="project-image">🧮</div>
+                <div class="project-content">
+                    <div class="project-title">Hesap Makinesi</div>
+                    <div class="project-desc">Temel matematik işlemleri yapan hesap makinesi.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">CSS Grid</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 9 -->
+            <div class="project-card">
+                <div class="project-image">📊</div>
+                <div class="project-content">
+                    <div class="project-title">Personel Takip Sistemi</div>
+                    <div class="project-desc">Personel ekleme, silme, güncelleme.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 10 -->
+            <div class="project-card">
+                <div class="project-image">🍔</div>
+                <div class="project-content">
+                    <div class="project-title">Dijital Menü</div>
+                    <div class="project-desc">Restoran için dijital menü uygulaması.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 11 -->
+            <div class="project-card">
+                <div class="project-image">🃏</div>
+                <div class="project-content">
+                    <div class="project-title">Rastgele Şaka Üretici</div>
+                    <div class="project-desc">API'dan rastgele şaka getirir.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Fetch API</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 12 -->
+            <div class="project-card">
+                <div class="project-image">📆</div>
+                <div class="project-content">
+                    <div class="project-title">Geri Sayım Sayacı</div>
+                    <div class="project-desc">Belirlenen tarihe kalan süreyi gösterir.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Date Object</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 13 -->
+            <div class="project-card">
+                <div class="project-image">🔳</div>
+                <div class="project-content">
+                    <div class="project-title">QR Kod Üretici</div>
+                    <div class="project-desc">Metin veya link için QR kod oluşturur.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">QR Code API</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 14 -->
+            <div class="project-card">
+                <div class="project-image">📄</div>
+                <div class="project-content">
+                    <div class="project-title">Kişisel CV Sitesi</div>
+                    <div class="project-desc">Özgeçmiş ve yeteneklerin tanıtıldığı site.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">Responsive</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+
+            <!-- Proje 15 -->
+            <div class="project-card">
+                <div class="project-image">✍️</div>
+                <div class="project-content">
+                    <div class="project-title">Basit Blog Sitesi</div>
+                    <div class="project-desc">Blog yazıları ekleme ve listeleme.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="#" class="project-link">Detaylar →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>© 2024 - Bilişim Yazılım Teknolojileri Öğrencisi | Tüm projeler öğrenci çalışmasıdır.</p>
+        </div>
+    </div>
+</body>
+</html>
